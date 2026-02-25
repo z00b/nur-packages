@@ -16,15 +16,15 @@ let
   };
 
   urlMap = {
-    x86_64-linux = "https://github.com/z00b/hello-bun/releases/download/v0.0.18/hello-bun_Linux_x86_64.tar.gz";
-    aarch64-linux = "https://github.com/z00b/hello-bun/releases/download/v0.0.18/hello-bun_Linux_arm64.tar.gz";
-    x86_64-darwin = "https://github.com/z00b/hello-bun/releases/download/v0.0.18/hello-bun_Darwin_x86_64.tar.gz";
-    aarch64-darwin = "https://github.com/z00b/hello-bun/releases/download/v0.0.18/hello-bun_Darwin_arm64.tar.gz";
+    x86_64-linux = "https://github.com/z00b/hello-bun/releases/download/v0.0.19/hello-bun_Linux_x86_64.tar.gz";
+    aarch64-linux = "https://github.com/z00b/hello-bun/releases/download/v0.0.19/hello-bun_Linux_arm64.tar.gz";
+    x86_64-darwin = "https://github.com/z00b/hello-bun/releases/download/v0.0.19/hello-bun_Darwin_x86_64.tar.gz";
+    aarch64-darwin = "https://github.com/z00b/hello-bun/releases/download/v0.0.19/hello-bun_Darwin_arm64.tar.gz";
   };
 in
 stdenvNoCC.mkDerivation {
   pname = "hellbun";
-  version = "0.0.18";
+  version = "0.0.19";
   src = fetchurl {
     url = urlMap.${system};
     sha256 = shaMap.${system};
