@@ -9,22 +9,22 @@ system ? builtins.currentSystem
 }:
 let
   shaMap = {
-    x86_64-linux = "1lqgax9w17zclqzhi7m0cy91z7f3ipfm83avdaj1b3kw0iyzxb88";
-    aarch64-linux = "0rvmhyv3dqih8cvp8g2fif1r8alqb2ymcv7b41mlkifm567nhmww";
-    x86_64-darwin = "08a7zzq9cb8npghqq87ahvqnlmaghd6qz9yyxpl50frhs14w3bwg";
-    aarch64-darwin = "1hhxrm2jscn1n81maarhdq1sadzcph0g65hi584v26f7hamd5yca";
+    x86_64-linux = "0py59lc3m965qyzawrams3qjqr2by0gypnz2m3xy24bjlmrf3ikm";
+    aarch64-linux = "1h8va3p6mv18n62zygjjay70kzn5pdqd21rvkplcfvb3lhypsdsy";
+    x86_64-darwin = "0vfdbbaqzkvcdm7ng9m1lbw5pqb4ncgyvzpgsilx5xll5pngb4rp";
+    aarch64-darwin = "19q40kl6a18ggr6ag9i1rlvrcl78c7rgdmrr3zk66nq8zllh1623";
   };
 
   urlMap = {
-    x86_64-linux = "1lqgax9w17zclqzhi7m0cy91z7f3ipfm83avdaj1b3kw0iyzxb88";
-    aarch64-linux = "0rvmhyv3dqih8cvp8g2fif1r8alqb2ymcv7b41mlkifm567nhmww";
-    x86_64-darwin = "08a7zzq9cb8npghqq87ahvqnlmaghd6qz9yyxpl50frhs14w3bwg";
-    aarch64-darwin = "1hhxrm2jscn1n81maarhdq1sadzcph0g65hi584v26f7hamd5yca";
+    x86_64-linux = "https://github.com/z00b/hello-bun/releases/download/v0.0.32/hello-bun_Linux_x86_64.tar.gz";
+    aarch64-linux = "https://github.com/z00b/hello-bun/releases/download/v0.0.32/hello-bun_Linux_arm64.tar.gz";
+    x86_64-darwin = "https://github.com/z00b/hello-bun/releases/download/v0.0.32/hello-bun_Darwin_x86_64.tar.gz";
+    aarch64-darwin = "https://github.com/z00b/hello-bun/releases/download/v0.0.32/hello-bun_Darwin_arm64.tar.gz";
   };
 in
 stdenvNoCC.mkDerivation {
   pname = "hellbun";
-  version = "0.0.31";
+  version = "0.0.32";
   src = fetchurl {
     url = urlMap.${system};
     sha256 = shaMap.${system};
