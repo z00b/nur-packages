@@ -9,22 +9,22 @@ system ? builtins.currentSystem
 }:
 let
   shaMap = {
-    x86_64-linux = "0000000000000000000000000000000000000000000000000000";
-    aarch64-linux = "0000000000000000000000000000000000000000000000000000";
-    x86_64-darwin = "0000000000000000000000000000000000000000000000000000";
-    aarch64-darwin = "0000000000000000000000000000000000000000000000000000";
+    x86_64-linux = "1lqgax9w17zclqzhi7m0cy91z7f3ipfm83avdaj1b3kw0iyzxb88";
+    aarch64-linux = "0rvmhyv3dqih8cvp8g2fif1r8alqb2ymcv7b41mlkifm567nhmww";
+    x86_64-darwin = "08a7zzq9cb8npghqq87ahvqnlmaghd6qz9yyxpl50frhs14w3bwg";
+    aarch64-darwin = "1hhxrm2jscn1n81maarhdq1sadzcph0g65hi584v26f7hamd5yca";
   };
 
   urlMap = {
-    x86_64-linux = "0000000000000000000000000000000000000000000000000000";
-    aarch64-linux = "0000000000000000000000000000000000000000000000000000";
-    x86_64-darwin = "0000000000000000000000000000000000000000000000000000";
-    aarch64-darwin = "0000000000000000000000000000000000000000000000000000";
+    x86_64-linux = "1lqgax9w17zclqzhi7m0cy91z7f3ipfm83avdaj1b3kw0iyzxb88";
+    aarch64-linux = "0rvmhyv3dqih8cvp8g2fif1r8alqb2ymcv7b41mlkifm567nhmww";
+    x86_64-darwin = "08a7zzq9cb8npghqq87ahvqnlmaghd6qz9yyxpl50frhs14w3bwg";
+    aarch64-darwin = "1hhxrm2jscn1n81maarhdq1sadzcph0g65hi584v26f7hamd5yca";
   };
 in
 stdenvNoCC.mkDerivation {
   pname = "hellbun";
-  version = "0.0.20";
+  version = "0.0.31";
   src = fetchurl {
     url = urlMap.${system};
     sha256 = shaMap.${system};
